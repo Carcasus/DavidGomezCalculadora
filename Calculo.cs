@@ -6,10 +6,11 @@ namespace DavidGomezCalculadora
 {
     class Calculo
     {
+        /*A de poder soportar al menos las operaciones suma, resta, multiplicación y división.*/
         internal static double HacerOperacion(double numerador1, double numerador2, string operando)
         {
             double resultado = 0;
-            // Use a switch statement to do the math.
+
             switch (operando)
             {
                 case "add":
@@ -22,13 +23,13 @@ namespace DavidGomezCalculadora
                     resultado = numerador1 * numerador2;
                     break;
                 case "div":
-                    // Ask the user to enter a non-zero divisor.
-                    if (numerador2 != 0)
-                    {
+                    // Pedimos al usuario que escriba un divisor que no sea cero
+                    if (numerador2 == 0.0)
+                        Console.WriteLine("No se dividir entre 0");
+                    else
                         resultado = numerador1 / numerador2;
-                    }
                     break;
-                // Return text for an incorrect option entry.
+                // Si no es ninguno de estos operandos, se devuelve vacio.
                 default:
                     break;
             }
