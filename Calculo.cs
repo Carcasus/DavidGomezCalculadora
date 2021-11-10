@@ -29,7 +29,7 @@ namespace DavidGomezCalculadora
                     else
                         resultado = numerador1 / numerador2;
                     break;
-                // Si no es ninguno de estos operandos, se devuelve vacio.
+                // Si no es ninguno de estos operandos, se devuelven vacios.
                 default:
                     break;
             }
