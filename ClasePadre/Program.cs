@@ -21,6 +21,7 @@ namespace ClasePadre
             String num1 = Console.ReadLine();
             String num2 = Console.ReadLine();
             int codigoFinal = 0;
+
             String argumentos = operando + " " + num1 + " " + num2;
 
             //Variable para comprobar sin cierre del programa, que las variables numericas son correctas
@@ -34,10 +35,11 @@ namespace ClasePadre
             }
             else if (operando == "add" || operando == "sub" || operando == "plus" || operando == "div")
             {
+                //Creamos el proceso con los datos necesarios
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
                     FileName = @".\DavidGomezCalculadora.exe",
-                    Arguments = argumentos, //Como pasar los argumentos?
+                    Arguments = argumentos,
                     UseShellExecute = false,
                     RedirectStandardError = true,
                     RedirectStandardOutput = true

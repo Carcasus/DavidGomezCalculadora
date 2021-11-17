@@ -10,8 +10,8 @@ namespace DavidGomezCalculadora
             int codigoFinal = 0;
 
             //Variable para comprobar sin cierre del programa, que las variables numericas son correctas
-            double numerador1 = 0;
-            double numerador2 = 0;
+            double numerador1 = double.Parse(num1);
+            double numerador2 = double.Parse(num2);
             try
             {
                 resultado = Calculo.HacerOperacion(numerador1, numerador2, operando);
