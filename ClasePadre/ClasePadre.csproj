@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.deps.json" Link="DavidGomezCalculadora.deps.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.runtimeconfig.dev.json" Link="DavidGomezCalculadora.runtimeconfig.dev.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.dll" Link="DavidGomezCalculadora.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.exe" Link="DavidGomezCalculadora.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
