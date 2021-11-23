@@ -58,6 +58,11 @@ namespace ClasePadre
                 codigoFinal = procesoHijo.ExitCode;
                 output.ReadToEnd();
 
+                error.Close();
+                output.Close();
+                procesoHijo.Close();
+                
+
             }
             else
             {
