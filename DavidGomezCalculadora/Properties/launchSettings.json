@@ -1,8 +1,7 @@
 {
   "profiles": {
     "DavidGomezCalculadora": {
-      "commandName": "Project",
-      "commandLineArgs": "add 5 a"
+      "commandName": "Project"
     }
   }
 }

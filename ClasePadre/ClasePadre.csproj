@@ -6,10 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.deps.json" Link="DavidGomezCalculadora.deps.json">
+    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.runtimeconfig.json" Link="DavidGomezCalculadora.runtimeconfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.runtimeconfig.dev.json" Link="DavidGomezCalculadora.runtimeconfig.dev.json">
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\DavidGomezCalculadora\bin\Debug\netcoreapp3.1\DavidGomezCalculadora.deps.json" Link="DavidGomezCalculadora.deps.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

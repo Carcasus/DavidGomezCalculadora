@@ -4,10 +4,11 @@ namespace DavidGomezCalculadora
 {
     class Program
     {
-        static int Main(String[] args) //pasarlo por los args para hacer el programa por linea de comandos
+        static int Main(String[] args) //pasarlo por los args para recoger los datos traidos por argumentos desde la clase Padre
         {
             double resultado = 0;
             int codigoFinal = 0;
+            //System.Diagnostics.Debugger.Launch();
 
             double numerador1 = double.Parse(args[1]);
             double numerador2 = double.Parse(args[2]);
@@ -26,7 +27,7 @@ namespace DavidGomezCalculadora
                 Console.WriteLine("Ha ocurrido un error intentando hacer la operacion.\n - Details: " + e.Message);
                 codigoFinal = 2;
             }
-            return codigoFinal;
+            return codigoFinal; //Retornamos codigoFinal a la clase Padre por el output, independientemente del resultado
         }
     }
 }

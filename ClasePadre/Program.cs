@@ -62,8 +62,6 @@ namespace ClasePadre
                 error.Close();
                 output.Close();
                 procesoHijo.Close();
-                
-
             }
             else
             {
@@ -91,6 +89,5 @@ namespace ClasePadre
             Console.WriteLine("\tplus");
             Console.WriteLine("\tdiv\n");
         }
-
     }
 }
