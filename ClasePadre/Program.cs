@@ -22,12 +22,10 @@ namespace ClasePadre
             String num2 = Console.ReadLine();
             int codigoFinal = 0;
 
-            String argumentos = operando + " " + num1 + " " + num2;
-
             //Variable para comprobar sin cierre del programa, que las variables numericas son correctas
             double numerador1 = 0;
             double numerador2 = 0;
-            
+
             if (!double.TryParse(num1, out numerador1) || !double.TryParse(num2, out numerador2))
             {
                 ShowError();
@@ -36,10 +34,11 @@ namespace ClasePadre
             else if (operando == "add" || operando == "sub" || operando == "plus" || operando == "div")
             {
                 //Creamos el proceso con los datos necesarios
+
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
                     FileName = @".\DavidGomezCalculadora.exe",
-                    Arguments = argumentos,
+                    Arguments = $"{operando} {num1} {num2}",
                     UseShellExecute = false,
                     RedirectStandardError = true,
                     RedirectStandardOutput = true
@@ -48,13 +47,15 @@ namespace ClasePadre
                 using Process procesoHijo = Process.Start(startInfo);
 
                 /*Recoja el resultado de la operación por consola.*/
-                var output = procesoHijo.StandardOutput;
                 var error = procesoHijo.StandardError;
+                var output = procesoHijo.StandardOutput;
 
                 /*Recoja el resultado de finalización del proceso hijo.*/
                 procesoHijo.WaitForExit();
 
-                
+                string resultadoCalculadora = output.ReadToEnd();
+                Console.WriteLine(resultadoCalculadora);
+
                 codigoFinal = procesoHijo.ExitCode;
                 output.ReadToEnd();
 
